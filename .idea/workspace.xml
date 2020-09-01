@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f664c89-9512-40ce-9fc7-54a4e1a4b322" name="Default Changelist" comment="Dodano napis &quot;Hello world&quot; do pliku &quot;Hello-world&quot;" />
+    <list default="true" id="8f664c89-9512-40ce-9fc7-54a4e1a4b322" name="Default Changelist" comment="Dodano napis &quot;Hello world&quot; do pliku &quot;Hello-world&quot;">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
