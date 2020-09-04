@@ -20,6 +20,6 @@ def exchange_rate():
         r = requests.get('https://api.exchangeratesapi.io/latest', params=query)
         response_dictionary = json.loads(r.content)
         rates = response_dictionary['rates']
-        print('Kurs dolara: ', rates['PLN'], 'zł')
+        print('Kurs', query['base'], ':', rates['PLN'], query['symbols'])
     except requests.exceptions.ConnectTimeout:
         print('Timeout')
