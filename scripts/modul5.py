@@ -1,10 +1,17 @@
 import requests
 import json
+import time
 
 def stats(function):
-    def inside():
-        function()
-    return inside()
+    def wrapper():
+            while True:
+                function()
+                query = {'base': 'USD', 'symbols': 'PLN'}
+                r = requests.get('https://api.exchangeratesapi.io/latest', params=query)
+                print('Data i godzina wysłania zapytania:', r.headers['Date'])
+                print('Czas wykonania zapytania: ', r.elapsed.total_seconds(), 's')
+                time.sleep(15)
+    return wrapper()
 
 @stats
 def exchange_rate():
@@ -13,6 +20,6 @@ def exchange_rate():
         r = requests.get('https://api.exchangeratesapi.io/latest', params=query)
         response_dictionary = json.loads(r.content)
         rates = response_dictionary['rates']
-        print('Kurs dolara: ', rates['PLN'])
+        print('Kurs dolara: ', rates['PLN'], 'zł')
     except requests.exceptions.ConnectTimeout:
         print('Timeout')
