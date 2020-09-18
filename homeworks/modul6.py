@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-driver = webdriver.Chrome('/Users/Karol202/PycharmProjects/chromedriver.exe')
-url = 'http://fabrykatestow.pl'
+driver = webdriver.Chrome('/Users/Karol K/PycharmProjects/chromedriver.exe')
+url = 'https://fabrykatestow.pl'
 
 driver.get(url)
 
